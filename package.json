@@ -1,0 +1,22 @@
+{
+  "name": "apoteku",
+  "version": "1.0.0",
+  "description": "Website Apotek Samawa Melayani Pembelian Secara Online dan Offline",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "client:dev": "cd client && npm run dev",
+    "server:dev": "cd server && npm run dev",
+    "build": "concurrently \"npm run client:build\" \"npm run server:build\"",
+    "client:build": "cd client && npm run build",
+    "server:build": "cd server && npm run build",
+    "start": "node server/dist/index.js"
+  },
+  "keywords": ["apotek", "pharmacy", "e-commerce"],
+  "author": "Apoteku Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
